@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
       <body>
         <Sidebar/>
         <Topbar/>
-        <Hero/>
         <main style={{marginLeft: '58px' }}>{children}</main>
       </body>
     </html>
