@@ -1,9 +1,9 @@
 const navItems = ['Auteur', 'Projects','Exp.', 'Certif.', 'Contact'];
 
 export default function Sidebar(){
-    <aside>
-        <div></div>
-        <nav>
+    return (<aside className={styles.sidebar}>
+        <div className={styles.logo}></div>
+        <nav className={styles.nav}>
             {navItems.map((item) =>(
                 <a key={item} href={`#${item.toLowerCase()}`} className={styles.navItem}>
                     {item}
@@ -11,4 +11,5 @@ export default function Sidebar(){
             ))}
         </nav>
     </aside>
+    )
 }
