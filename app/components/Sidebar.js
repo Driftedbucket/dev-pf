@@ -1,3 +1,5 @@
+import styles from ',/Sidebar.module.css';
+
 const navItems = ['Auteur', 'Projects','Exp.', 'Certif.', 'Contact'];
 
 export default function Sidebar(){
