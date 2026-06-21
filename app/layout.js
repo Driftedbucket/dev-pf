@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" >
       <body>
         <Sidebar/>
-        
+        <Topbar/>
         <main style={{marginLeft: '58px' }}>{children}</main>
       </body>
     </html>
