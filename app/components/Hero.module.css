@@ -1,0 +1,52 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--topbar-height) 60px 0 80px;
+  max-width: 700px;
+}
+
+.title {
+  font-size: 6.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.dot {
+  color: var(--brand);
+}
+
+.subtitle {
+  color: var(--brand);
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.description {
+  color: var(--text-dim);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 20px;
+  max-width: 500px;
+  /* padding-left: 20px;   
+  padding-bottom: 0px;  */
+}
+
+.contactBtn {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 30px;
+  padding: 14px 32px;
+  background: var(--brand);
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.contactBtn:hover {
+  opacity: 0.85;
+}
