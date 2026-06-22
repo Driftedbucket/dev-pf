@@ -1,6 +1,6 @@
-import styles from ',/Sidebar.module.css';
+import styles from './Sidebar.module.css';
 
-const navItems = ['Auteur', 'Projects','Exp.', 'Certif.', 'Contact'];
+const navItems = ['About', 'Projects', 'Exp.', 'Academics', 'Certif.', 'Contact'];
 
 export default function Sidebar(){
     return (<aside className={styles.sidebar}>
