@@ -60,7 +60,7 @@ export default function About(){
                 </div>
                 <div className={styles.stack}>
                     <h3 className={styles.stackTitle}>Tech Stack</h3>
-                    {stacks.map((item)=>(
+                    {stack.map((item)=>(
                         <div key={item.name}>
                             <div className={styles.barLabel}>
                                 <span>{item.name}</span>
