@@ -27,16 +27,54 @@ export default function About(){
             (entry)=>{
                 if(entry.isIntersecting){
                     setAnimated(true);
-                    obsever.disconnect();
+                    observer.disconnect();
                 }
             },{thresholde:0.2} //only triggers when 20% of the section is vissiblel
         );
 
         if(sectionRef.current) observer.observe(sectionRef.current);
-        return ()=>observer.disconnet();
+        return ()=>observer.disconnect();
     })
     
     return(
-        <div></div>
+        <section id="about" ref={sectionRef} className={styles.about}>
+            <h2 className={styles.sectionTitle}>About<span>Me</span></h2>
+            
+            <div className={styles.content}>
+                <div className={styles.bio}>
+                    <p>
+                        Olah, I'm <strong>Awike Gulu</strong> ~ a 3rd year Computer Science student 
+                        at NUST (Namibia University of Science and Technology), specializing in 
+                        Software Engineering.
+                    </p>
+                    <p>
+                        I build web applications with a focus on clean UI and solid fundamentals. 
+                        Currently leveling up my full-stack skills through personal projects and 
+                        coursework, with a particular interest in React ecosystems and backend APIs.
+                    </p>
+                    <p>
+                        When I'm not coding, I'm usually exploring new tools, contributing to group 
+                        projects, or figuring out how to make things look better than they need to.
+                    </p>
+                </div>
+                <div className={styles.stack}>
+                    <h3 className={styles.stackTitle}>Tech Stack</h3>
+                    {stacks.map((item)=>(
+                        <div key={item.name}>
+                            <div className={styles.barLabel}>
+                                <span>{item.name}</span>
+                                <span>{item.percent}%</span>
+                            </div>
+                            <div className={styles.barTrack}>
+                                <div
+                                className={styles.barFill}
+                                style={{width: animated?`${item.percent}%`:'0%'}}
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
     )
 }
