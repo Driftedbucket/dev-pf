@@ -48,49 +48,51 @@ export default function About() {
 
   return (
     <section id="about" ref={sectionRef} className={styles.about}>
-      <h2 className={styles.sectionTitle}>
-        About<span>Me</span>
-      </h2>
+      <div className={styles.inner}>
+        <h2 className={styles.sectionTitle}>
+          About <span>Me</span>
+        </h2>
 
-      <div className={styles.content}>
-        <div className={styles.leftHalf}>
-          <div className={styles.bio}>
-            <p>
-              Olah, I'm <strong>Awike Gulu</strong> ~ a 3rd year Computer
-              Science student at NUST (Namibia University of Science and
-              Technology), specializing in Software Engineering.
-            </p>
-            <p>
-              I build web applications with a focus on clean UI and solid
-              fundamentals. Currently leveling up my full-stack skills through
-              personal projects and coursework, with a particular interest in
-              React ecosystems and backend APIs.
-            </p>
-            <p>
-              When I'm not coding, I'm usually exploring new tools, contributing
-              to group projects, or figuring out how to make things look better
-              than they need to.
-            </p>
+        <div className={styles.content}>
+          {/* LEFT: bio + hobbies */}
+          <div className={styles.leftHalf}>
+            <div className={styles.bio}>
+              <p>
+                Olah, I'm <strong>Awike Gulu</strong> — a 3rd year Computer
+                Science student at NUST (Namibia University of Science and
+                Technology), specializing in Software Engineering.
+              </p>
+              <p>
+                I build web applications with a focus on clean UI and solid
+                fundamentals. Currently leveling up my full-stack skills through
+                personal projects and coursework, with a particular interest in
+                React ecosystems and backend APIs.
+              </p>
+              <p>
+                When I'm not coding, I'm usually exploring new tools,
+                contributing to group projects, or figuring out how to make
+                things look better than they need to.
+              </p>
+            </div>
+
+            {/* hobbies card — sits right under bio */}
+            <div className={styles.hobbies}>
+              <div className={styles.hobbiesLabel}>
+                <span>Hobbies</span>
+              </div>
+              <ul className={styles.hobbiesList}>
+                {hobbies.map((hobby) => (
+                  <li key={hobby}>{hobby}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        <div id="hobbies" className={styles.hobbies}>
-          <div className={styles.hobbiesText}>
-            <h2>
-              Ho<span>bbi</span>es
-            </h2>
-          </div>
-          <div className={styles.hobbiesList}>
-           
-           {/*  {hobbies.map((hobby)=>(
-                <span key={hobby.id}>{hobby.name}</span>
-            ))} */}
-          </div>
-        </div>
-        </div>
-        <div className={styles.rightHalf}>
-          <div className={styles.stack}>
+
+          {/* RIGHT: tech stack bars */}
+          <div className={styles.rightHalf}>
             <h3 className={styles.stackTitle}>Tech Stack</h3>
             {stack.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className={styles.barGroup}>
                 <div className={styles.barLabel}>
                   <span>{item.name}</span>
                   <span>{item.percent}%</span>
@@ -105,7 +107,6 @@ export default function About() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
