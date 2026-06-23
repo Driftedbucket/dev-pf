@@ -20,11 +20,10 @@ const stack = [
 ];
 
 const hobbies = [
-  {id:1, hobby: "Music"},
-  {id:2, hobby:"Trading"},
-  {id:3, hobby:"Reading"},
-  {id:4, hobby:"Gaming(combat and sports)"},
-  {id:5, hobby:"Music"}
+  "Music",
+  "Trading",
+  "Reading",
+  "Weight Lifting",
 ];
 
 export default function About() {
