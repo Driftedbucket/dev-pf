@@ -33,7 +33,7 @@ export default function About() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entry) => {
+      ([entry]) => {
         if (entry.isIntersecting) {
           setAnimated(true);
           observer.disconnect();
