@@ -1,11 +1,10 @@
 .about {
   min-height: 100vh;
-  padding: 100px 100px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
+  padding: 100px 0 80px;
   border-top: 1px solid #222;
+  display: flex;
+  justify-content: center;   /*centers .inener horizontally*/
+  align-items: center;
   
 }
 
