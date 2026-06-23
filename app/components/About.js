@@ -44,7 +44,7 @@ export default function About() {
 
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
-  });
+  }, []);
 
   return (
     <section id="about" ref={sectionRef} className={styles.about}>
