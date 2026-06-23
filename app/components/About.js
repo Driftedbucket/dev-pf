@@ -79,11 +79,7 @@ export default function About() {
             </h2>
           </div>
           <div className={styles.hobbiesList}>
-           <span>Music</span>
-           <br></br>
-           <span>Trading</span>
-           <span>Reading</span>
-           <span>Weight Lifting</span>
+           
            {/*  {hobbies.map((hobby)=>(
                 <span key={hobby.id}>{hobby.name}</span>
             ))} */}
