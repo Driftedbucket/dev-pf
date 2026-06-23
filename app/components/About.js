@@ -39,7 +39,7 @@ export default function About() {
           observer.disconnect();
         }
       },
-      { thresholde: 0.2 }, //only triggers when 20% of the section is vissiblel
+      { threshold: 0.2 }, //only triggers when 20% of the section is vissiblel
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -79,7 +79,8 @@ export default function About() {
             </h2>
           </div>
           <div className={styles.hobbiesList}>
-           <span>Music</span><br></br>
+           <span>Music</span>
+           <br></br>
            <span>Trading</span>
            <span>Reading</span>
            <span>Weight Lifting</span>
