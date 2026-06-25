@@ -50,7 +50,7 @@ function ProjectCard({project, index}){
         const observer = new IntersectionObserver(
             ([entry]) =>{
                 if(entry.isIntersecting){
-                    setTImeout(()=>setVisible(true), index*100);
+                    setTimeout(()=>setVisible(true), index*100);
                     observer.disconnect();
                 }
             },{threshold:0.1}
