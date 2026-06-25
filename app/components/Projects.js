@@ -34,12 +34,14 @@ const projects=[
 ]
 
 const featured = projects.find((p) =>p.featured);
-const rest = projects.filter(() => !p.featured);
+const rest = projects.filter((p) => !p.featured);
 
-function imagePLaceholder({title}){
+function imagePlaceholder({title}){
     return(
-        <div></div>
-    )
+        <div className={styles.placeholder}>
+            <span>{title}</span>
+        </div>
+    );
 }
 
 function ProjectCard({project, index}){
@@ -115,7 +117,7 @@ export default function Projects(){
     );
     if(sectionRef.current) observer.observe(sectionRef.current);
     return ()=>observe.disconnect();
-    },[]);s
+    },[]);
 
     return(
       <section id="projects" ref={sectionRef} className={styles.projects}>
