@@ -100,6 +100,22 @@ function ProjectCard({project, index}){
 }
 
 export default function Projects(){
+    const sectionRef = useRef(null);
+    const [headerVisible, setHeaderVisible] = useState(false);
+
+    useEffect(() =>{
+        const observer = new IntersectionObserver(
+            ([entry])=>{
+                if(entry.isIntersecting){
+                   setHeaderVisible(true);
+                   observer.disconnect(); 
+                }
+            },
+        {threshold:0.1}
+    );
+    if(sectionRef.current) observer.observe(sectionRef.current);
+    return ()=>observe.disconnect();
+    },[]);
 
 }
 
