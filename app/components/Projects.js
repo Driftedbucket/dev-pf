@@ -55,7 +55,7 @@ function ProjectCard({project, index}){
                 }
             },{threshold:0.1}
         );
-        if(cardRef.current) observer.observe(cardRf.current);
+        if(cardRef.current) observer.observe(cardRef.current);
         return ()=> observer.disconnect();
     }, [index]);
 
