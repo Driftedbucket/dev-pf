@@ -70,7 +70,7 @@ function ProjectCard({project, index}){
                 <div className={styles.cardOverlay}>
                     <p className={styles.overlayDesc}>{project.description}</p>
                     <div className={styles.overlayTags}>
-                        {projects.tags.map((tag) => (
+                        {project.tags.map((tag) => (
                             <span key={tag} className={styles.tag}>{tag}</span>
                         ))}
                     </div>
