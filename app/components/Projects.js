@@ -20,7 +20,6 @@ const projects=[
         tags:["PHP","MySQL","Javascript","HTML5","CSS3"],
         github:"https://github.com/WAD621S-2025/Job-Community-Board",
         image:null,
-        featured:true
     },
     {
         id:3,
@@ -29,14 +28,13 @@ const projects=[
         tags:["FastAPI","MySQL", "JWT", "PyTest", "React", "TailwindCSS"],
         github:"https://github.com/SPS611S-2026/group27-automatic-grouping-system-itulonge",
         image:null,
-        featured:true
     }
 ]
 
 const featured = projects.find((p) =>p.featured);
 const rest = projects.filter((p) => !p.featured);
 
-function imagePlaceholder({title}){
+function ImagePlaceholder({title}){
     return(
         <div className={styles.placeholder}>
             <span>{title}</span>
@@ -62,17 +60,17 @@ function ProjectCard({project, index}){
     }, [index]);
 
     return(
-        <div ref={cardRef} className={`${stryles.card} ${visible ? styles.cardVisible: ""}`}>
+        <div ref={cardRef} className={`${styles.card} ${visible ? styles.cardVisible: ""}`}>
             <div className={styles.cardImage}>
                 {project.image ? (
                     <img src={project.image} alt={project.title}/>
                 ):(
-                    <ImagePlaceHolder title={project.title}/>
+                    <ImagePlaceholder title={project.title}/>
                 )}
                 <div className={styles.cardOverlay}>
                     <p className={styles.overlayDesc}>{project.description}</p>
                     <div className={styles.overlayTags}>
-                        {projects.tags.map(() => (
+                        {projects.tags.map((tag) => (
                             <span key={tag} className={styles.tag}>{tag}</span>
                         ))}
                     </div>
@@ -132,7 +130,7 @@ export default function Projects(){
               {featured.image ? (
                 <img src={featured.image} alt={featured.title} />
               ) : (
-                <imagePlaceholder title={featured.title} />
+                <ImagePlaceholder title={featured.title} />
               )}
             </div>
             <div className={styles.featuredContent}>
