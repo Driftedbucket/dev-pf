@@ -115,7 +115,52 @@ export default function Projects(){
     );
     if(sectionRef.current) observer.observe(sectionRef.current);
     return ()=>observe.disconnect();
-    },[]);
+    },[]);s
 
+    return(
+      <section id="projects" ref={sectionRef} className={styles.projects}>
+      <div className={styles.inner}>
+        <h2 className={`${styles.sectionTitle} ${headerVisible ? styles.titleVisible : ""}`}>
+          My <span>Projects</span>
+        </h2>
+
+        {featured && (
+          <div className={`${styles.featured} ${headerVisible ? styles.featuredVisible : ""}`}>
+            <div className={styles.featuredImage}>
+              {featured.image ? (
+                <img src={featured.image} alt={featured.title} />
+              ) : (
+                <ImagePlaceholder title={featured.title} />
+              )}
+            </div>
+            <div className={styles.featuredContent}>
+              <span className={styles.featuredBadge}>Featured Project</span>
+              <h3 className={styles.featuredTitle}>{featured.title}</h3>
+              <p className={styles.featuredDesc}>{featured.description}</p>
+              <div className={styles.featuredTags}>
+                {featured.tags.map((tag) => (
+                  <span key={tag} className={styles.tag}>{tag}</span>
+                ))}
+              </div>
+              
+                href={featured.github}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.featuredGithub}
+              <a>
+                <FaGithub /> View on GitHub
+              </a>
+            </div>
+          </div>
+        )}
+
+        <div className={styles.grid}>
+          {rest.map((project, i) => (
+            <ProjectCard key={project.id} project={project} index={i} />
+          ))}
+        </div>
+      </div>
+    </section>  
+    );
 }
 
