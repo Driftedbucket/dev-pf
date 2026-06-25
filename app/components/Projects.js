@@ -74,23 +74,24 @@ function ProjectCard({project, index}){
                             <span key={tag} className={styles.tag}>{tag}</span>
                         ))}
                     </div>
-                    
+                    <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
                     className={styles.overlayGithub}
-                    <a>
+                    >
                     <FaGithub/>View on Github
                     </a>
                 </div>
             </div>
             <div className={styles.cardFooter}>
                 <h3 className={styles.cardTitle}>{project.Title}</h3>
+        <a            
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
                     className={styles.cardLink}
-        <a>
+        >
           <FaGithub />
         </a>
             </div>
