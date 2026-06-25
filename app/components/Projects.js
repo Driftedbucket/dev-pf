@@ -132,7 +132,7 @@ export default function Projects(){
               {featured.image ? (
                 <img src={featured.image} alt={featured.title} />
               ) : (
-                <ImagePlaceholder title={featured.title} />
+                <imagePlaceholder title={featured.title} />
               )}
             </div>
             <div className={styles.featuredContent}>
