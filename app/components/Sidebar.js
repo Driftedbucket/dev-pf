@@ -7,7 +7,7 @@ export default function Sidebar(){
         <div className={styles.logo}>AG.</div>
         <nav className={styles.nav}>
             {navItems.map((item) =>(
-                <a key={item} href={`#${item.toLowerCase()}`} className={styles.navItem}>
+                <a key={item} href={`#${item==='Exp.' ? 'exp' : item.toLowerCase()}`} className={styles.navItem}>
                     {item}
                 </a>
             ))}
