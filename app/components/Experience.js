@@ -89,3 +89,21 @@ const experiences = [
     ],
   },
 ];
+
+function ExperienceCard({exp, index}){
+    const [visible, setVisible] = useState(false);
+    const cardRef = useRef(null);
+
+    useEffect(()=>{
+        const observer = new  InntersectionObserver(
+            ([entry])=>{
+                if(entry.isIntersecting){
+                    setTimeout(()=>setVisible(true), index*120);
+                    observer.disconnect();
+                }
+            },{threshold: 0.15}
+        );
+        if(cardRef.current) observer.observe(cardRef.current);
+        return () => observer.disconnect;
+    }, [index]);
+}
