@@ -96,7 +96,7 @@ function ExperienceCard({exp, index}){
     const cardRef = useRef(null);
 
     useEffect(()=>{
-        const observer = new  InntersectionObserver(
+        const observer = new  IntersectionObserver(
             ([entry])=>{
                 if(entry.isIntersecting){
                     setTimeout(()=>setVisible(true), index*120);
