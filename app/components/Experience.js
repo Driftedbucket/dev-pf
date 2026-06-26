@@ -162,5 +162,31 @@ export default function(){
     return ()=> observer.disconnect(); 
     }, []);
 
-    
+    return(
+        <section id="exp" ref={sectionRef} className={styles.experience}>
+            <div className={styles.inner}>
+        <h2
+          className={`${styles.sectionTitle} ${
+            headerVisible ? styles.titleVisible : ""
+          }`}
+        >
+          My <span>Experience</span>
+        </h2>
+
+        <div
+          className={`${styles.badge} ${headerVisible ? styles.badgeVisible : ""}`}
+        >
+          <span className={styles.badgeDot} />
+          Open to internships & opportunities
+        </div>
+
+        <div className={styles.timeline}>
+          <div className={styles.timelineLine} />
+          {experiences.map((exp, i) => (
+            <ExperienceCard key={exp.id} exp={exp} index={i} />
+          ))}
+        </div>
+      </div>
+        </section>
+    )
 }
