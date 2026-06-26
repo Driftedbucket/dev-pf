@@ -1,0 +1,205 @@
+.experience {
+  min-height: 100vh;
+  padding: 100px 0 80px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 60px;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.titleVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sectionTitle span {
+  color: var(--brand);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid #333;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 60px;
+  opacity: 0;
+  transition: opacity 0.6s ease 0.3s;
+}
+
+.badgeVisible {
+  opacity: 1;
+}
+
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 32px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--brand), transparent);
+}
+
+.card {
+  position: relative;
+  padding: 0 0 48px 40px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cardVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.dot {
+  position: absolute;
+  left: -25px;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--brand);
+  border: 2px solid var(--background);
+  box-shadow: 0 0 0 3px #2a2a2a;
+}
+
+.cardInner {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 24px 28px;
+  transition: border-color 0.2s ease;
+}
+
+.cardInner:hover {
+  border-color: var(--brand);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.role {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.project {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.githubLink:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.highlights li {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+
+.highlights li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: #222;
+  color: var(--brand);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #333;
+}
