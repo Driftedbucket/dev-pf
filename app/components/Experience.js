@@ -1,5 +1,6 @@
 "use client";
-import {useEffect, useRef, useState} from react;
+import {useEffect, useRef, useState} from "react";
+import {FaGithub} from "react-icons/fa";
 import styles from "./Experience.module.css";
 
 const experiences = [
