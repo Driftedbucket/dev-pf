@@ -106,4 +106,40 @@ function ExperienceCard({exp, index}){
         if(cardRef.current) observer.observe(cardRef.current);
         return () => observer.disconnect;
     }, [index]);
+
+    return(
+        <div ref={cardRef} className={`${styles.card} ${visible ? styles.cardVisible : ""}`}>
+             <div className={styles.dot} />
+
+      <div className={styles.cardInner}>
+        <div className={styles.cardHeader}>
+          <div>
+            <span className={styles.type}>{exp.type}</span>
+            <h3 className={styles.role}>{exp.role}</h3>
+            <p className={styles.project}>{exp.project}</p>
+          </div>
+          <a
+            href={exp.github}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.githubLink}
+          >
+            <FaGithub /> GitHub
+          </a>
+        </div>
+
+        <ul className={styles.highlights}>
+          {exp.highlights.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
+
+        <div className={styles.tags}>
+          {exp.tags.map((tag) => (
+            <span key={tag} className={styles.tag}>{tag}</span>
+          ))}
+        </div>
+      </div>
+        </div>
+    )
 }
