@@ -1,4 +1,5 @@
 import "./globals.css";
+import {Orbitron, Inter, Fira_Code} from 'next/font/google';
 import Sidebar from "./components/Sidebar";
 import  Topbar from "./components/Topbar";
 import Hero from "./components/Hero";
