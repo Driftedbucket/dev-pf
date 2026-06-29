@@ -26,7 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" >
+    <html lang="en" className={`${oribtron.variable} ${inter.variable} ${firaCode.variable}`}>
       <body>
         <Sidebar/>
         <Topbar/>
