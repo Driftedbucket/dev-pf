@@ -1,5 +1,6 @@
+"use client"
 import styles from "./Hero.module.css";
-
+import {useState, useEffect} from 'react';
 const FULL_TEXT="Hi, I'm Awike Gulu"
 const TYPING_SPEED = 80;
 
