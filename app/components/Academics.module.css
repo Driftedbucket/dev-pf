@@ -1,0 +1,215 @@
+.academics {
+  min-height: 100vh;
+  padding: 100px 0 80px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 60px;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+  text-align: right;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.titleVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sectionTitle span {
+  color: var(--brand);
+}
+
+.certificate {
+  position: relative;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.certificateVisible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--brand);
+  opacity: 0.6;
+}
+
+.cornerTL { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.cornerTR { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.cornerBL { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.cornerBR { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+.certHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 30px;
+}
+
+.uniIcon {
+  font-size: 2rem;
+  color: var(--brand);
+  margin-bottom: 8px;
+}
+
+.uniName {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.degree {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  max-width: 420px;
+  margin-top: 4px;
+}
+
+.year {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.averageBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.averageLabel {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.averageValue {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--brand);
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+
+.modules {
+  width: 100%;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.modulesLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.modulesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 4px;
+  border-bottom: 1px solid #222;
+  gap: 16px;
+}
+
+.moduleRow:last-child {
+  border-bottom: none;
+}
+
+.moduleName {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.gradeBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* distinction = brand yellow, merit = softer tone */
+.distinction {
+  background: rgba(244, 196, 48, 0.15);
+  color: var(--brand);
+  border: 1px solid rgba(244, 196, 48, 0.3);
+}
+
+.merit {
+  background: rgba(160, 160, 160, 0.12);
+  color: var(--text-dim);
+  border: 1px solid #333;
+}
+
+.pass {
+  background: rgba(120, 120, 120, 0.1);
+  color: var(--text-dim);
+  border: 1px solid #2a2a2a;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: var(--brand);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.downloadBtn:hover {
+  opacity: 0.85;
+}
