@@ -1,7 +1,7 @@
 "use client";
 import {useState, useEffect, useRef} from "react";
 import {HiOutlineDownload} from "react-icons/hi";
-import {FaUinversity} from "react-icons/fa";
+import {FaUniversity} from "react-icons/fa";
 import styles from "./Academics.module.css";
 
 const modules=[
